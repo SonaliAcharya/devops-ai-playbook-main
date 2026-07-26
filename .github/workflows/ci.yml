@@ -93,5 +93,5 @@ jobs:
           # Debug line: View what actually changed
           git diff gitops/k8s/
           git diff --staged --quiet || git commit -m "ci: update image tags to ${{ github.sha }}"
-          git push
+          git push origin HEAD:${{ github.ref_name }}
 
