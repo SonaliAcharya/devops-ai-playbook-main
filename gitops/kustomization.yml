@@ -18,6 +18,9 @@ resources:
   - k8s/frontend/deployment.yml
   - k8s/grafana-dashboard.yml
 
+generatorOptions:
+  disableNameSuffixHash: true
+ 
 configMapGenerator:
   - name: boutique-db-dump
     files:
