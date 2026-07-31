@@ -16,6 +16,7 @@ spec:
       containers:
         - name: gateway
           image: 249183180225.dkr.ecr.us-east-1.amazonaws.com/gateway:591f21229698ad6b95e44e7d3c48e9dca9e09890
+          imagePullPolicy: Always
           ports:
             - containerPort: 3001
           env:
