@@ -83,7 +83,7 @@ jobs:
             sed -i "s|${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/${SERVICE}:.*|${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/${SERVICE}:${NEW_TAG}|g" $MANIFEST
           done
 
-          sed -i "s|${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/frontend:.*|${ACCOUNT} .dkr.ecr.${REGION}.amazonaws.com/frontend:${NEW_TAG}|g" gitops/k8s/frontend/deployment.yml
+          sed -i "s|${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/frontend:.*|${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/frontend:${NEW_TAG}|g" gitops/k8s/frontend/deployment.yml
 
       - name: Commit and push updated manifests
         run: |
